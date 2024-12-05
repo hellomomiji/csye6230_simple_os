@@ -1,0 +1,1 @@
+Make the script executable: `chmod +x os_cli.sh`
