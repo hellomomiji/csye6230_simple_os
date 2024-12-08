@@ -1,0 +1,12 @@
+{
+  "README.txt": {
+    "content": "Welcome to SimpleFS!",
+    "size": 20,
+    "process_id": null
+  },
+  "sample_new.txt": {
+    "content": "\"Hello!\"",
+    "size": 8,
+    "process_id": "cc20553f-88c9-4c40-8f82-f7dc8abb94b0"
+  }
+}
