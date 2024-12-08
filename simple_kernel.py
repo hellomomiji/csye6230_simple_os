@@ -29,6 +29,8 @@ class MemoryManager:
         
         self.memory_map[process_id] = size
         self.used_memory += size
+        print(f"[Log] Allocated {size} bytes for process {process_id}")
+        print(f"[Log] Total used memory: {self.used_memory} bytes, Free memory: {self.total_memory - self.used_memory} bytes")
         return True
     
     def deallocate_memory(self, process_id: str):
@@ -40,6 +42,8 @@ class MemoryManager:
         if process_id in self.memory_map:
             self.used_memory -= self.memory_map[process_id]
             del self.memory_map[process_id]
+        print(f"[Log] Deallocated memory for process {process_id}")
+        print(f"[Log] Total used memory: {self.used_memory} bytes, Free memory: {self.total_memory - self.used_memory} bytes")
     
     def get_free_memory(self) -> int:
         """

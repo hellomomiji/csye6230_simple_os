@@ -152,12 +152,6 @@ class FileSystem:
             if filename not in self.files:
                 return False
             
-            process = self._remove_file_process(filename)
-            kernel_process = self.kernel.create_process(
-                process.name,
-                priority=process.priority
-            )
-            
             # Get process ID associated with the file
             process_id = self.files[filename].get('process_id')
             
@@ -168,14 +162,10 @@ class FileSystem:
             if process_id:
                 self.kernel.memory_manager.deallocate_memory(process_id)
             
-            if kernel_process:
-                print(f"File {filename} removed successfully.")
-                self.save_filesystem()
-                return process_id
-            
+            print(f"File {filename} removed successfully.")
             self.save_filesystem()
-            
-            return "Failed to remove file."
+            return process_id
+        
     
     def rename_file(self, old_name: str, new_name: str) -> bool:
         """
