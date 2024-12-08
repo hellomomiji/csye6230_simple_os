@@ -8,11 +8,11 @@ class FileSysCLI(cmd.Cmd):
     Command-line interface for interacting with kernel-integrated file system.
     """
     intro = '''
-    Welcome to SimpleFS 
+    Welcome to SimpleOS 
     - Kernel-integrated File System
     - Type help or ? to list commands
     '''
-    prompt = 'SimpleFS> '
+    prompt = 'SimpleOS> '
 
     def __init__(self):
         super().__init__()
