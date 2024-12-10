@@ -13,7 +13,12 @@ The project is organized into the following directories:
 
 
 ## Usage
-To run the OS simulator, simply run the `simple_cli.py` script. The simulator will start and display a command prompt. You can then enter commands to interact with the OS and file system. The following commands are supported:
+To run the OS simulator, simply run the `simple_cli.py` script.
+```
+python3 simple_cli.py
+```
+
+The simulator will start and display a command prompt. You can then enter commands to interact with the OS and file system. The following commands are supported:
 - create filename [content] [memory_size]: Create a new file
 - list: List all files
 - read filename: Read file content
